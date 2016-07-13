@@ -949,6 +949,11 @@ function show_supergroup_settingsmod(msg, target)
 		if not data[tostring(target)]['settings']['public'] then
 			data[tostring(target)]['settings']['public'] = 'no'
 		end
+end
+   if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_link'] then
+			data[tostring(target)]['settings']['lock_link'] = 'yes'
+		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_rtl'] then
